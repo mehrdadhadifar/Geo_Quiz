@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="background_colors">background_colors
+        <item>Light red</item>
+        <item>Light blue</item>
+        <item>Light green</item>
+        <item>White(default)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Question:" />
+
+    <TextView
+        android:id="@+id/list_row_question_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Color:" />
+
+    <TextView
+        android:id="@+id/list_row_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="TextView" />
+
+    <CheckBox
+        android:id="@+id/list_row_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer" />
+
+    <CheckBox
+        android:id="@+id/list_row_cheat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cheat" />
+</LinearLayout>

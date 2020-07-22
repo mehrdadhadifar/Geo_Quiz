@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="button_true">True</string>
+    <string name="button_false">False</string>
+    <string name="question_australia">Australia is the biggest continent</string>
+    <string name="question_oceans">Pacific is the biggest ocean</string>
+    <string name="question_mideast">All of the MiddleEast countries speak Arabic</string>
+    <string name="question_africa">Egypt is located in the Africa</string>
+    <string name="question_americas">United Estates is the most population country in the world</string>
+    <string name="question_asia">Asia is located in south</string>
+    <string name="toast_correct">Correct</string>
+    <string name="toast_incorrect">Incorrect</string>
+    <string name="start">Start!</string>
+    <string name="cheat">Cheat</string>
+    <string name="cheat_question">Are you sure you want to cheat?</string>
+    <string name="back">Back</string>
+    <string name="hint_text">The input format must be like this: \n{[{Tehran in iran}, {true}, {false}, {green}],\n[{iran language is English}, {false} {true}, {red}], \n[{England is in usa}, {false}, {false}, {black}]} , \n{30}</string>
+    <string name="radio_question_size_small">Small</string>
+    <string name="radio_question_size_medium">Medium</string>
+    <string name="radio_question_size_large">Large</string>
+    <string name="question_size">Select size of the question:</string>
+    <string name="hide_quiz_buttons">Hide quiz buttons</string>
+    <string name="background_color">Background color</string>
+    <string name="setting_for_scores">Setting for scores</string>
+    <string name="positive_score">Positive score:</string>
+    <string name="negative_score">Negative score:</string>
+    <string name="timeout">Timeout</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="setting">Setting</string>
+    <string name="reset">Reset</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

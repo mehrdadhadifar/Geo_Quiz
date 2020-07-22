@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.SettingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/question_size"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_question_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_question_size_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:checked="true"
+            android:text="@string/radio_question_size_small" />
+
+        <RadioButton
+            android:id="@+id/radio_question_size_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="@string/radio_question_size_medium" />
+
+        <RadioButton
+            android:id="@+id/radio_question_size_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="@string/radio_question_size_large" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkbox_quiz_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:checked="false"
+        android:text="@string/hide_quiz_buttons" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/background_color"
+        android:textSize="13sp" />
+
+    <Spinner
+        android:id="@+id/spinner_background_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:entries="@array/background_colors" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_for_scores" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/positive_score" />
+
+        <EditText
+            android:id="@+id/editText_positive_score"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/negative_score" />
+
+        <EditText
+            android:id="@+id/editText_negative_score"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox_enable_timeout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/timeout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="5dp"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/button_discard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="5dp"
+            android:text="@string/discard" />
+
+    </LinearLayout>
+</LinearLayout>

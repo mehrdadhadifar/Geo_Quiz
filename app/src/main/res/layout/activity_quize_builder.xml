@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.QuizBuilderActivity">
+
+    <EditText
+        android:id="@+id/editText_question"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="top|left"
+        android:hint="@string/hint_text"
+        android:imeOptions="actionDone"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="8"
+        android:maxLength="1000"
+        android:paddingBottom="10dp"
+        android:scrollbars="vertical"
+        android:singleLine="false" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/start" />
+
+</LinearLayout>
