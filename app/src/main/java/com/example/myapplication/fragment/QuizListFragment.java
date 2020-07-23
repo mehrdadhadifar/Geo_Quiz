@@ -6,13 +6,14 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
@@ -24,6 +25,7 @@ import java.util.List;
 
 
 public class QuizListFragment extends Fragment {
+    public static final String TAG = "QLF";
     private RecyclerView mRecyclerView;
     private QuestionRepository mRepository;
 
@@ -36,9 +38,9 @@ public class QuizListFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent=getActivity().getIntent();
-        mRepository=(QuestionRepository)intent.getSerializableExtra(QuizBuilderActivity.QUESTION_REPOSITORY);
-
+        Intent intent = getActivity().getIntent();
+        String input = (String) intent.getSerializableExtra(QuizBuilderActivity.ALL_QUESTION_STRING);
+        mRepository = new QuestionRepository(input);
     }
 
     @Override
@@ -46,7 +48,7 @@ public class QuizListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz_list, container, false);
         findViews(view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         initUI();
 
         return view;
@@ -54,7 +56,9 @@ public class QuizListFragment extends Fragment {
 
     private void initUI() {
         List<Question> questionList = mRepository.getQuestionList();
+        Log.d(TAG, "QUestion:" + questionList.get(0).getText());
         QuestionAdapter adapter = new QuestionAdapter(questionList);
+        mRecyclerView.setAdapter(adapter);
     }
 
     private void findViews(View view) {
@@ -91,6 +95,14 @@ public class QuizListFragment extends Fragment {
 
         private List<Question> mQuestions;
 
+        public List<Question> getQuestions() {
+            return mQuestions;
+        }
+
+        public void setQuestions(List<Question> questions) {
+            mQuestions = questions;
+        }
+
         public QuestionAdapter(List<Question> questions) {
             mQuestions = questions;
         }
@@ -112,6 +124,7 @@ public class QuizListFragment extends Fragment {
 
         @Override
         public int getItemCount() {
+            Log.d(TAG, "size::" + mQuestions.size());
             return mQuestions.size();
         }
     }

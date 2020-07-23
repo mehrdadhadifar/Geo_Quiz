@@ -12,14 +12,16 @@
         <activity android:name=".controller.QuizListActivity"></activity>
         <activity android:name=".controller.SignUpActivity" />
         <activity android:name=".controller.LoginActivity">
+
+        </activity>
+        <activity android:name=".controller.CheatActivity" />
+        <activity android:name=".controller.QuizBuilderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controller.CheatActivity" />
-        <activity android:name=".controller.QuizBuilderActivity" />
         <activity android:name=".controller.QuizActivity" />
     </application>
 

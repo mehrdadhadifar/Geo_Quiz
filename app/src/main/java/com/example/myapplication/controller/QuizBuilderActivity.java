@@ -35,9 +35,9 @@ public class QuizBuilderActivity extends AppCompatActivity {
                 if (ParseString.checkString(mEditTextQuestions.getText().toString())) {
 //                    Intent intent = new Intent(QuizBuilderActivity.this, QuizActivity.class);
                     Intent intent = new Intent(QuizBuilderActivity.this, QuizListActivity.class);
-//                    intent.putExtra(ALL_QUESTION_STRING, mEditTextQuestions.getText().toString());
+                    intent.putExtra(ALL_QUESTION_STRING, mEditTextQuestions.getText().toString());
                     QuestionRepository questionRepository = new QuestionRepository(mEditTextQuestions.getText().toString());
-                    intent.putExtra(QUESTION_REPOSITORY, questionRepository);
+//                    intent.putExtra(QUESTION_REPOSITORY, questionRepository);
                     startActivity(intent);
                 } else
                     Toast.makeText(QuizBuilderActivity.this, "Please enter correct input", Toast.LENGTH_LONG).show();

@@ -7,13 +7,12 @@ import com.example.myapplication.model.MyColor;
 import com.example.myapplication.model.Question;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 public class ParseString {
     private static long mTimeOut;
     private static ArrayList<Question> mQuestionBank = new ArrayList<>();
-    private static Set<String> set = new HashSet<>();
+    private static List<String> set = new ArrayList<String>();
 
 
     public static ArrayList<Question> getQuestionBank(String input) {
@@ -42,7 +41,7 @@ public class ParseString {
         while (input.contains("]")) {
             parseQuestions(input);
             input = input.substring(input.indexOf("]") + 1);
-            Log.d(QuizActivity.TAG, input);
+//            Log.d(QuizActivity.TAG, input);
         }
     }
 
